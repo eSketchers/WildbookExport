@@ -15,7 +15,7 @@ const cropAndSaveImage = async (
   cropRectangle: number[],
   outputPath: string,
 ) => {
-  return await sharp(imageBuffer)
+  return await sharp(imageBuffer).rotate()
     .extract({
       left: cropRectangle[0],
       top: cropRectangle[1],
